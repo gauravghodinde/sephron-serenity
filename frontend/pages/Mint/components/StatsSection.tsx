@@ -3,12 +3,10 @@ import { Card } from "@/components/ui/card";
 // Internal utils
 import { clampNumber } from "@/utils/clampNumber";
 // Internal hooks
-import { useGetCollectionData } from "@/hooks/useGetCollectionData";
 
-interface StatsSectionProps {}
 
-export const StatsSection: React.FC<StatsSectionProps> = () => {
-  const { data } = useGetCollectionData();
+export const StatsSection: React.FC<{ data: any }> = ( { data}) => {
+  
   const { maxSupply = 0, totalMinted = 0, uniqueHolders = 0 } = data ?? {};
 
   return (

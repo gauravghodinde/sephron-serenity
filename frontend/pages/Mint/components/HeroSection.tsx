@@ -26,20 +26,18 @@ import { config } from "@/config";
 // Internal enrty functions
 import { mintNFT } from "@/entry-functions/mint_nft";
 
-interface HeroSectionProps {
-  collectionAddress: string;
-}
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ collectionAddress }) => {
-  const { data } = useGetCollectionData(collectionAddress);
+
+export const HeroSection: React.FC<{ data: any }>  = ({ data }) => {
+
 
   
   
   const queryClient = useQueryClient();
   const { account, signAndSubmitTransaction } = useWallet();
   const [nftCount, setNftCount] = useState(1);
-  console.log(data);
-  console.log("sadfjladshflja");
+  // console.log(data);
+  // console.log("sadfjladshflja");
   const { userMintBalance = 0, collection, totalMinted = 0, maxSupply = 1 } = data ?? {};
   const mintUpTo = Math.min(userMintBalance, maxSupply - totalMinted);
 

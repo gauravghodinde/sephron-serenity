@@ -16,7 +16,7 @@ export const LaunchpadHeader: FC<LaunchpadHeaderProps> = ({ title }) => {
 
       <div className="flex gap-2 items-center">
         <Link className={buttonVariants({ variant: "link" })} to={"/"}>
-          Mint Page
+          IPO
         </Link>
         <Link className={buttonVariants({ variant: "link" })} to={"/my-collections"}>
             My Collections
