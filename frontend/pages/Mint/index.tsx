@@ -59,17 +59,17 @@ interface MintQueryResult {
   current_token_datas_v2: Array<Token>;
 }
 
-interface MintData {
-  maxSupply: number;
-  totalMinted: number;
-  uniqueHolders: number;
-  userMintBalance: number;
-  collection: Collection;
-  startDate: Date;
-  endDate: Date;
-  isMintActive: boolean;
-  isMintInfinite: boolean;
-}
+// interface MintData {
+//   maxSupply: number;
+//   totalMinted: number;
+//   uniqueHolders: number;
+//   userMintBalance: number;
+//   collection: Collection;
+//   startDate: Date;
+//   endDate: Date;
+//   isMintActive: boolean;
+//   isMintInfinite: boolean;
+// }
 
 
 async function getCollectionData(collection_address:string,account: any): Promise<any | null> {

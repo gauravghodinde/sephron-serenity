@@ -1,10 +1,9 @@
-import { useGetCollectionData } from "@/hooks/useGetCollectionData";
-import { useMemo } from "react";
+
 import { Link } from "react-router-dom";
 import { WalletSelector } from "./WalletSelector";
 import { IS_DEV } from "@/constants";
 import { buttonVariants } from "@/components/ui/button";
-import { config } from "@/config";
+
 
 export function Header() {
 

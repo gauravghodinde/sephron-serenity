@@ -11,7 +11,7 @@ import { clampNumber } from "@/utils/clampNumber";
 import { formatDate } from "@/utils/formatDate";
 import { aptosClient } from "@/utils/aptosClient";
 // Internal hooks
-import { useGetCollectionData } from "@/hooks/useGetCollectionData";
+
 // Internal components
 import { Image } from "@/components/ui/image";
 import { Card, CardContent } from "@/components/ui/card";

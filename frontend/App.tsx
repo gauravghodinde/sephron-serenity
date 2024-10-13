@@ -2,9 +2,10 @@ import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import { Mint } from "@/pages/Mint";
 import { CreateCollection } from "@/pages/CreateCollection";
+
 import { MyCollections } from "@/pages/MyCollections";
-import { TopBanner } from "./components/TopBanner";
-import { IS_DEV } from "./constants";
+import Landing from "./pages/Landing";
+
 
 function Layout() {
   return (
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        element: <Landing/>,
+      },
+      {
+        path: "/ipo",
         element: <Mint />,
       },
       {
@@ -37,7 +42,6 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      {IS_DEV && <TopBanner />}
       <RouterProvider router={router} />
     </>
   );
